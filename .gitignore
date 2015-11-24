@@ -1,0 +1,16 @@
+.DS_Store
+.classpath
+.project
+bin/
+gen/
+gen-external-apklibs/
+*.idea/
+*.swp
+out/
+target/
+*.apk
+build/
+.gradle/
+*.log
+node_modules/
+app/node_modules/
