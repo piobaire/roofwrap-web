@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('myApp', [
+angular.module('roofwrapApp', [
     'ngRoute',
-    'myApp.home'
+    'roofwrapApp.home'
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/home'});

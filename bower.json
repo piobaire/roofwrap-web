@@ -1,8 +1,8 @@
 {
-  "name": "angular-base",
-  "description": "A template angular project",
+  "name": "roofwrap-web",
+  "description": "Roofwrap website",
   "version": "0.0.0",
-  "homepage": "https://github.com/piobaire/angular-base",
+  "homepage": "https://github.com/piobaire/roofwrap-web",
   "license": "MIT",
   "private": true,
   "dependencies": {
