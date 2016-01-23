@@ -2,8 +2,9 @@
 
 angular.module('roofwrapApp', [
     'ngRoute',
-    'roofwrapApp.home'
-]).
-    config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.otherwise({redirectTo: '/home'});
-    }]);
+    'roofwrapApp.home',
+    'roofwrapApp.test'
+])
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.otherwise({redirectTo: '/home'});
+}]);

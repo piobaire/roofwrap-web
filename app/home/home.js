@@ -4,11 +4,10 @@ angular.module('roofwrapApp.home', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {
-    templateUrl: 'home.html',
+    templateUrl: 'home/home.html',
     controller: 'HomeController'
-  });
+  })
 }])
 
-.controller('HomeController', [function() {
-
+.controller('HomeController', ['$scope', function($scope) {
 }]);
