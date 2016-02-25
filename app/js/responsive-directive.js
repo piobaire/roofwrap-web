@@ -8,14 +8,19 @@
     // is better get first the innerWitdh that will not include a lateral panel like the console inspector, bookmarks, etc
     var winWidth = $window.innerWidth || $window.outerWidth;
     var helper   = {
-      isSmartDevice : isSmartDevice( $window ),
       isXs: function () { return winWidth < 768; },
       isSm: function () { return winWidth >= 768 && winWidth < 992; },
       isMd: function () { return winWidth >= 992 && winWidth < 1200; },
-      isLg: function () { return winWidth >= 1200; }
+      isLg: function () { return winWidth >= 1200; },
+      isSmartDevice: function () {
+        var ua = $window['navigator']['userAgent'] || $window['navigator']['vendor'] || $window['opera'];
+        return (/iPhone|iPod|iPad|Silk|Android|BlackBerry|Opera Mini|IEMobile/).test(ua);
+      },
+      isMobile: function() {
+        return this.isSmartDevice() && this.isXs();
+      }
     };
 
-    // Publish accessor function...
     this.$get = function() {
       return helper;
     };
@@ -102,7 +107,7 @@
           }
         });
 
-        // Fix memory leak an remove watcher when element/directive is released
+        // Fix memory leak and remove watcher when element/directive is released
         scope.$on( "$destroy", unwatch );
       };
     };
@@ -116,11 +121,6 @@
       ( deviceTypes['lg'] && responsiveHelper.isLg() ) || false;
     };
   }
-
-  function isSmartDevice( $window ) {
-  var ua = $window['navigator']['userAgent'] || $window['navigator']['vendor'] || $window['opera'];
-  return (/iPhone|iPod|iPad|Silk|Android|BlackBerry|Opera Mini|IEMobile/).test(ua);
-}
 
 function isMobile($window, windowWidth) {
   return isSmartDevice($window) && (windowWidth <= 767);
