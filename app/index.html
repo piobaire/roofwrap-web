@@ -7,15 +7,19 @@
 <!--[if IE 8]>
 <html lang="en" ng-app="roofwrapApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" ng-app="roofwrapApp" class="no-js"> <!--<![endif]-->
+<html lang="en" ng-app="roofwrapApp" class="no-js"><!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Roofwrap - Affordable, long-term, easily installed home mobile roofing system</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/screen.css">
-    <link rel="stylesheet" href="css/menu.css">
+  <meta charset="utf-8">
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Roofwrap - Affordable, long-term, easily installed home mobile roofing system</title>
+
+  <link rel="stylesheet" href="css/screen.css" rel="stylesheet">
 
 </head>
 <body>
@@ -23,84 +27,42 @@
     <div id="head">
     </div>
 
-    <nav id="nav" role="navigation">
-      <a href="#nav" title="Show navigation">Show navigation</a>
-      <a href="#" title="hide navigation">Hide navigation</a>
-      <ul class="clearfix">
-        <li>
-          <a href="#/home">Home</a>
-        </li>
-        <li>
-          <a href="#/home" aria-haspopup="true"><span>Products</span></a>
-          <ul>
-            <li>
-              <a href="#/home">Overview</a>
-            </li>
-            <li>
-              <a href="#/home">Product Descriptions</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#/home" aria-haspopup="true"><span>About</span></a>
-          <ul>
-            <li>
-              <a href="#/home">About RoofWrap</a>
-            </li>
-            <li>
-              <a href="#/home">EPDM Roofing History</a>
-            </li>
-            <li>
-              <a href="#/home">Download Brochure</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#/test">Warranty</a>
-        </li>
-        <li>
-          <a href="#/home">FAQ</a>
-        </li>
-        <li>
-          <a href="#/home" aria-haspopup="true"><span>Resources</span></a>
-          <ul>
-            <li>
-              <a href="#/home">Find a contractor</a>
-            </li>
-            <li>
-              <a href="#/home">Construction Diagrams</a>
-            </li>
-            <li>
-              <a href="#/home">Installation Diagrams</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+    <div ar-xs>
+      {{ 'Mobile only' }}
+    </div>
+
+    <div ar-sm>
+      {{ 'Tablet only' }}
+    </div>
+
+    <div ar-md>
+      {{ 'Desktop only' }}
+    </div>
+
+    <div ar-lg>
+      {{ 'Large????' }}
+    </div>
 
     <div id="content" ng-view>
     </div>
 
     <div id="foot">
-      <p>Foot</p>
+      {{ 'Foot' }}
     </div>
   </div>
 
   <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular-route.min.js"></script>
 -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <!-- In development use:
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
+-->
 <script src="app.js"></script>
 <script src="home/home.js"></script>
 <script src="test/test.js"></script>
-<script src="jquery-2.2.0.min.js"></script>
-<script src="doubletaptogo.min.js"></script>
-<script>
-  $(function() {
-    $('#nav li:has(ul)').doubleTapToGo();
-  });
-</script>
+<script src="js/responsive-directive.js"></script>
+
 </body>
 </html>

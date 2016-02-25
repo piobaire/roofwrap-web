@@ -3,7 +3,7 @@ html, body {
 }
 
 #head {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -20,9 +20,13 @@ html, body {
   width: 100%;
 }
 
+#menu {
+  position: relative;
+  top: 13em;
+}
+
 #content {
-  position: absolute;
-  top: 15.5em;
+  position: relative;;
   padding-bottom: 100px;
 }
 
