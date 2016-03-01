@@ -1,68 +1,29 @@
-
-<!DOCTYPE html>
-<!--[if lt IE 7]>
-<html lang="en" ng-app="roofwrapApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html lang="en" ng-app="roofwrapApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html lang="en" ng-app="roofwrapApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="en" ng-app="roofwrapApp" class="no-js"><!--<![endif]-->
+<html lang="en" >
 <head>
-  <meta charset="utf-8">
-  <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Roofwrap - Affordable, long-term, easily installed home mobile roofing system</title>
-
-  <link rel="stylesheet" href="css/screen.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
 </head>
-<body>
-  <div id="wrapper">
-    <div id="head">
+<body ng-app="roofwrapApp">
+
+    <div layout="column">
+      <div id="head"></div>
+      <div id="menu"></div>
+      <div flex layout-fill id="content">
+        <ng-view>
+        </ng-view>
+      </div>
+      <div id="foot"></div>
     </div>
 
-    <div ar-xs>
-      {{ 'Mobile only' }}
-    </div>
-
-    <div ar-sm>
-      {{ 'Tablet only' }}
-    </div>
-
-    <div ar-md>
-      {{ 'Desktop only' }}
-    </div>
-
-    <div ar-lg>
-      {{ 'Large????' }}
-    </div>
-
-    <div id="content" ng-view>
-    </div>
-
-    <div id="foot">
-      {{ 'Foot' }}
-    </div>
-  </div>
-
-  <!-- In production use:
--->
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-  <!-- In development use:
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
--->
-<script src="app.js"></script>
-<script src="home/home.js"></script>
-<script src="test/test.js"></script>
-<script src="js/responsive-directive.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/baseController.js"></script>
 
 </body>
 </html>
