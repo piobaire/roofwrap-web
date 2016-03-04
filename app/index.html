@@ -9,14 +9,14 @@
 </head>
 <body ng-app="roofwrapApp" ng-cloak>
 
-    <div layout="column">
+    <div flex layout="column" id="container">
       <div id="head"></div>
       <roofwrap-menu></roofwrap-menu>
-      <div flex layout-fill id="content">
+      <div id="content">
         <ng-view>
         </ng-view>
       </div>
-      <div id="foot"></div>
+      <div id="foot"><p>some content</p></div>
     </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -28,7 +28,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.min.js"></script>
   <script src="app.js"></script>
   <script src="js/responsive-helper.js"></script>
-  <script src="controllers/baseController.js"></script>
+  <script src="controllers/base-controller.js"></script>
   <script src="directives/menu-directive.js"></script>
 
 </body>

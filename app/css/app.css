@@ -1,5 +1,15 @@
 html, body {
   height: 100%;
+  background-color: #333!important;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  display: table;
 }
 
 #head {
@@ -11,18 +21,17 @@ html, body {
   position: relative;
 }
 
-
-
-
-
-
 /** Start desktop Menu **/
 
 #desktop-menu {
   background: #6e6e6e;
   color: white;
   position: relative;
-  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: solid white 5px;
 }
 
 #desktop-menu ul {
@@ -56,6 +65,7 @@ html, body {
 #desktop-menu li:hover > ul {
   display: block;
   position: absolute;
+  background: rgba(0, 0, 0, 1.0);
 }
 
 #desktop-menu li:hover li {
@@ -63,9 +73,11 @@ html, body {
 }
 
 #desktop-menu li:hover a {
+  background: rgba(0, 0, 0, 1.0);
 }
 
 #desktop-menu li:hover li a:hover {
+  background: rgba(0, 48, 88, 1.0);
 }
 
 .main-nav li ul li {
@@ -92,17 +104,29 @@ html, body {
   text-transform: uppercase;
 }
 
+#desktop-menu ul.main-nav li {
+  text-align: center;
+  padding: 1em 0;
+}
+
+#desktop-menu ul.main-nav li ul li {
+  padding: 0;
+  border-bottom: solid white 5px;
+}
+
+#desktop-menu ul.main-nav li a {
+  padding: 1em;
+}
+
+#desktop-menu ul.main-nav li ul {
+  margin-top: 1em;
+  border-top: solid white 5px;
+}
+
 /** End desktop Menu **/
 
-
-
-
-
-
-
-
-
 /** Start Mobile Menu **/
+
 #menuToggle {
   display: block;
   position: absolute;
@@ -194,9 +218,88 @@ html, body {
 
 #content {
   background-color: #fff;
+  padding: 0 2em;
 }
 
 #foot {
+  display: table-row;
+  vertical-align: bottom;
   background-color: #003058;
   height: 100px;
+  width: 100%;
+}
+
+.feature-block {
+  background-color: #eee;
+  margin: 0 -2em;
+  color: #003058;
+}
+
+.feature-block h4 {
+  margin: auto auto;
+  padding-left: 1em;
+}
+
+.feature-block p {
+  max-width: 80%;
+  font-size: .82em;
+  font-weight: bold;
+  padding-right: 1em;
+  padding-left: .5em;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0 1em;
+  font-size: .82em;
+  vertical-align: middle;
+  font-weight: bolder;
+  background: #fff;
+  box-shadow: 0 0 10px #000;
+}
+
+.feature-list li {
+  padding: .25em 0;
+}
+
+.feature-list li:before {
+  content: '\2714';
+}
+
+.home-image-column {
+  position: relative;
+  margin: 0 -2em;
+  color: #fff;
+}
+
+.black {
+  color: #000;
+}
+
+.annotation {
+  color: #000;
+  font-size: .75em;
+}
+
+.home-image-column img {
+  align-content: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.home-image-column h3 {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  font-size: 2.25em;
+}
+
+.home-image-column p {
+  text-align: right;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
 }
