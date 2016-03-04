@@ -1,8 +1,10 @@
 <div layout="column">
   <div class="home-image-column">
+    <div ng-if="!responsiveHelper.isSmall() && !responsiveHelper.isExtraSmall()">
     <img src="img/black.and.white.roof.png" />
     <h3 class="comment-text">ADAPTIVE <span class="black">&amp; HARDY</span></h3>
     <p class="annotation">AVAILABLE IN BLACK OR WHITE</p>
+  </div>
   </div>
   <div layout="row" class="feature-block">
     <h4 flex="25">WHY ROOFWRAP?</h4>
