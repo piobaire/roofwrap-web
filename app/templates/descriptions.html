@@ -14,34 +14,14 @@
     <img src="" /> <!-- TODO - img -->
     <p>PLEASE NOTE: Roofwrap maintains the availability of Materials Safety Data Sheets for all its products. These publications contain health and safety information on how to protect oneself from any potential hazards associated with product use. Roofwrap Material Safety Data Sheets should be read and understood by all those using the products. Available upon request.</p>
 
-    <h5>MEMBRANES</h5>
-    <ul>
-      <li>Standard Black EPDM Membrane</li>
-      <li>White-on-Black EPDM Membrane</li>
-    </ul>
+    <br />
 
-    <h5>ADHESIVES, FASTENERS AND SEALANTS</h5>
-    <ul>
-      <li>Drill Point Fasteners</li>
-      <li>RoofWrap Sealant</li>
-      <li>In-Seam Tape</li>
-      <li>White EPDM Cover Tape</li>
-      <li>Uncured EPDM Flashing Tape</li>
-      <li>Acrylic Water Base Bonding Adhesive</li>
-      <li>Bonding Adhesive</li>
-      <li>RMS Tape</li>
-      <li>Cured EPDM Cover Tape</li>
-      <li>Caulk Tape</li>
-      <li>Tape Primer</li>
-    </ul>
-
-    <h5>FLASHINGS AND MISCELLANEOUS</h5>
-    <ul>
-      <li>2” Barbed Seam Plates</li>
-      <li>Termination Bar</li>
-      <li>Steel Vent Cap</li>
-      <li>Fan Vent Flashing Hood</li>
-      <li>Retrofit Pipe Boot</li>
-    </ul>
+    <div ng-repeat="category in products.categories">
+      <h5>{{category.categoryName}}</h5>
+      <ul ng-repeat="product in category.products">
+        <li><a href="#/products/descriptions/{{product.templateUrl}}">{{product.productName}}</a></li> <!-- TODO add link -->
+      </ul>
+      <br />
+    </div>
   </div>
 </div>

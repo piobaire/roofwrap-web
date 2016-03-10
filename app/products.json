@@ -1,0 +1,94 @@
+{
+  "categories": [
+    {
+      "categoryName": "Membrane",
+      "products" :
+      [
+        {
+          "productName" : "Standard Black EPDM Membrane",
+          "templateUrl" : "blackMembrane"
+        },
+        {
+          "productName" : "White on Black EPDM Membrane",
+          "templateUrl" : "whiteMembrane"
+        }
+      ]
+    },
+    {
+      "categoryName": "Adhesives, Fasteners and Sealants",
+      "products" :
+      [
+        {
+          "productName" : "Drill Point Fasteners",
+          "templateUrl" : "drillPointFasteners"
+        },
+        {
+          "productName" : "RoofWrap Sealant",
+          "templateUrl" : "roofwrapSealant"
+        },
+        {
+          "productName" : "In-Seam Tape",
+          "templateUrl" : "inSeamTape"
+        },
+        {
+          "productName" : "White EPDM Cover Tape",
+          "templateUrl" : "whiteEPDMCoverTape"
+        },
+        {
+          "productName" : "Uncured EPDM Flashing Tape",
+          "templateUrl" : "uncuredEPDMFlashingTape"
+        },
+        {
+          "productName" : "Acrylic Water Base Bonding Adhesive",
+          "templateUrl" : "waterBaseBondingAdhesive"
+        },
+        {
+          "productName" : "Bonding Adhesive",
+          "templateUrl" : "bondingAdhesive"
+        },
+        {
+          "productName" : "RMS Tape",
+          "templateUrl" : "rmsTape"
+        },
+        {
+          "productName" : "Cured EPDM Cover Tape",
+          "templateUrl" : "curedEPDMCoverTape"
+        },
+        {
+          "productName" : "Caulk Tape",
+          "templateUrl" : "caulkTape"
+        },
+        {
+          "productName" : "Tape Primer",
+          "templateUrl" : "tapePrimer"
+        }
+      ]
+    },
+    {
+      "categoryName": "Flashings and Miscellaneous",
+      "products" :
+      [
+        {
+          "productName" : "Barbed Seam Plates",
+          "templateUrl" : "barbedSeamPlate"
+        },
+        {
+          "productName" : "Termination Bar",
+          "templateUrl" : "terminationBar"
+        },
+        {
+          "productName" : "Steel Vent Cap",
+          "templateUrl" : "steelVentCap"
+        },
+        {
+          "productName" : "Fan Vent Flashing Hood",
+          "templateUrl" : "fanVentFlashingHood"
+        },
+        {
+          "productName" : "Retrofit Pipe Boot",
+          "templateUrl" : "retrofitPipeBoot"
+        }
+      ]
+    }
+  ]
+}
