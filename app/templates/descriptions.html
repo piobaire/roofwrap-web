@@ -19,7 +19,7 @@
     <div ng-repeat="category in products.categories">
       <h5>{{category.categoryName}}</h5>
       <ul ng-repeat="product in category.products">
-        <li><a href="#/products/descriptions/{{product.templateUrl}}">{{product.productName}}</a></li> <!-- TODO add link -->
+        <li><a href="#/descriptions/{{product.templateUrl}}">{{product.productName}}</a></li> <!-- TODO add link -->
       </ul>
       <br />
     </div>
