@@ -13,6 +13,10 @@ html, body {
   display: table;
 }
 
+#container h1, #container h2, #container h3, #container h4, #container h5, #container p {
+  padding: .5em 0;
+}
+
 #head {
   background-color: #003058;
   background-image: url("../img/roofwrap.mobile.home.roofing.system.png");
@@ -252,6 +256,10 @@ html, body {
   padding: .5em 2em 1em 1em;
 }
 
+.margin1 {
+  margin: 1em;
+}
+
 .feature-list {
   list-style: none;
   padding: 0 1em;
@@ -260,6 +268,7 @@ html, body {
   font-weight: bolder;
   background: #fff;
   box-shadow: 0 0 10px #000;
+  margin: 1em;
 }
 
 .feature-list li {
@@ -314,4 +323,37 @@ html, body {
   width: 100%;
   bottom: 0;
   margin: 0;
+}
+
+.decorated {
+  margin-left: 2em;
+}
+
+.decorated li {
+  padding: .15em 0;
+}
+
+ul.decorated li {
+  list-style: disc;
+}
+
+ol.decorated li {
+  list-style: decimal;
+}
+
+.calculator-block {
+  position: relative;
+  width: 100%;
+}
+
+.calculator-block p {
+  padding: 0 1em .5em 0!important;
+}
+
+.calculator-block label {
+  display: inline-block;
+}
+
+.calculator-block label, .calculator-block select {
+  min-width: 25%;
 }

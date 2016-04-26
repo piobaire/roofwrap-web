@@ -1,0 +1,157 @@
+<div layout="column">
+  <h3>Price Calculator</h3>
+  <hr />
+
+  <p>Your price will be wrong, or you will end up with the wrong size RoofWrap for your home if you don't enter information accurately, so please take the time to enter this information correctly. We only need your information if you want to contact us about a RoofWrap kit.</p>
+
+  <h4>Home Dimensions</h4>
+  <hr />
+
+  <form novalidate>
+
+    <div class="calculator-block" layout="row">
+      <div flex="50">
+        <label for="houseWidth">Home Width: </label>
+        <input type="radio" ng-model="homeInfo.form" value="{{formSingle}}" ng-selected="homeInfo.form == 'formSingle'" /> {{formSingle}}
+        <input type="radio" ng-model="homeInfo.form" value="{{formDouble}}" ng-selected="homeInfo.form == 'formDouble'" /> {{formDouble}}
+      </div>
+      <p flex="50">The design of your home is usually defined as single or double wide. Please contact us if you are unsure of the design of your home. We will gladly help you ascertain which form your home is.</p>
+    </div>
+    <h5>Please contact RoofWrap Sales Department for quotations involving Triple Wide homes.</h5>
+    <hr />
+
+    <h5>Enter the dimensions of your home, from edge to edge, measured in feet:</h5>
+    <div class="calculator-block" layout="row">
+      <div flex="50">
+
+        <label for="length">Length: </label>
+        <select name="length" ng-model="homeInfo.length" ng-options="n + ' Feet' for n in range(20, 90)">
+        </select><br />
+
+        <label for="width">Width: </label>
+        <select name="width" ng-model="homeInfo.width" ng-options="n + ' Feet' for n in range(10, 35)">
+        </select>
+
+        <br />
+
+        <label for="tipoutLength">Tipout Length: </label>
+        <select name="tipoutLength" ng-model="homeInfo.tipoutLength" ng-options="n + ' Feet' for n in rangeWithZero(5, 30)">
+        </select><br />
+
+        <label for="tipoutWidth">Tipout Width: </label>
+        <select name="tipoutWidth" ng-model="homeInfo.tipoutWidth" ng-options="n + ' Feet' for n in rangeWithZero(5, 30)">
+        </select>
+      </div>
+      <p flex="50">If you require additional material for a Tip Out (an additional roof area attached to the structure), please enter the dimensions here.
+    </div>
+
+    <h4>Colors, wind exposure and roof penetrations</h4>
+    <hr />
+
+    <div class="calculator-block" layout="row">
+      <div flex="50">
+        <label for="color">Color: </label>
+        <input type="radio" ng-model="homeInfo.color" value="{{colorBlack}}" ng-selected="homeInfo.color == 'colorBlack'" />{{colorBlack}}
+        <input type="radio" ng-model="homeInfo.color" value="{{colorWhite}}" ng-selected="homeInfo.color == 'colorWhite'" />{{colorWhite}}
+      </div>
+      <p flex="50">The color you pick will affect the price of your new roof. Black and white carry equal warranties, however white will help save you money by reflecting heat in the summer and thus, keeping your home cooler.</p>
+    </div>
+    <hr />
+
+    <h5>This option is very important to the long-term service of your roof. Choose the option that most closely fits your area.</h5>
+
+    <div class="calculator-block" layout="row">
+      <div flex="50">
+        <select name="windExposure" ng-model="homeInfo.windExposure" ng-options="wind.name + ' wind exposure: ' + wind.mph for wind in windExposureChoices">
+        </select>
+        <p>Very High Wind Exposures may want to consider the options of fully-adhering the membrane to the roof deck surface. Contact RoofWrap for information on its system options or refer to "Fully Adhered Installation over a Porous Surface" in the Installation Guide.</p>
+      </div>
+      <p flex="50">Some of these options involve using screw attachments of one or two 12" wide strips of 3/8" plywood or 7/16" OSB sheathing that will run, end to end, lengthwise under your new roof, as an application substrate for a liquid applied adhesive that will increase the membrane attachment strength. The holding quality of the system will achieve its greatest ability with the screws placed into the wood truss and perimeter edge wood members. The proper screw penetration and the wood's integrity to provide maximum pull out resistance will determine the actual system wind resistance.</p>
+    </div>
+    <hr />
+
+    <h5>Pick the style of roof that matches your own.</h5>
+
+    <div class="calculator-block" layout="row">
+      <div flex="50">
+        <select name="roofStyle" ng-model="homeInfo.roofProfile" ng-options="roof.name + ' ($' + roof.price + ' extra)' for roof in roofProfiles">
+        </select>
+
+      </div>
+      <div flex="50">
+        <img src="img/{{homeInfo.roofProfile.image}}" />
+        <p>Your roof should look like this. If it doesn't try one of the other roof profiles.</p>
+      </div>
+    </div>
+    <hr />
+
+    <h5>Please note that the number of vent flashings chosen should reflect the total number needed to be replaced with new components. Reuse of existing vent flashings should not be counted in this total.</h5>
+    <div class="calculator-block" layout="row">
+      <div flex="50">
+        <label for="plumbingPipes">2" or less Plumbing Pipes:</label>
+        <select name="plumbingPipes" ng-model="homeInfo.plumbingPipes" ng-options="n for n in range(0, 8)">
+        </select><br />
+        <label for="kitchenVents">2" - 5" Kitchen Fan vents:</label>
+        <select name="kitchenVents" ng-model="homeInfo.kitchenVents" ng-options="n for n in range(0, 8)">
+        </select><br />
+        <label for="bathroomVents">5" - 7" Bathroom Fan vents:</label>
+        <select name="bathroomVents" ng-model="homeInfo.bathroomVents" ng-options="n for n in range(0, 8)">
+        </select><br />
+        <label for="weatherheadPowerMasts">Weatherhead Power Masts:</label>
+        <select name="weatherheadPowerMasts" ng-model="homeInfo.weatherheadPowerMasts" ng-options="n for n in range(0, 1)">
+        </select><br />
+      </div>
+      <div flex="50">
+        <p>Plumbing pipes are the smallest vent pipes. They exhaust plumbing or sewage gas. They are typically 2" or less in diameter.</p>
+        <p>Kitchen vent pipes are typically roof mounted units that cover and weatherize a 5" diameter duct for kitchen air exhaust.</p>
+        <p>Bathroom fan vents are typically a roof mounted unit that covers and weatherizes a 7" diameter duct for bathroom air exhaust.</p>
+        <p>A weatherhead power mast is a through-roof connection pipe that provides support and entry for incoming electric power service wiring.</p>
+      </div>
+    </div>
+    <hr />
+
+    <h5>Insulation Board</h5>
+    <label for="insulationBoardThickness">If applicable, thickness of roof insulation board you will be installing your RoofWrap kit over:</label><br />
+    <select name="insulationBoardThickness" ng-model="homeInfo.insulationBoardThickness" ng-options="n + '&quot; thick' for n in range(0, 6)">
+    </select>
+
+    <hr />
+
+    <h5>Cost, based on your input</h5>
+
+    <p> Total: {{total()}}</p>
+
+    <hr />
+
+    <h5>Need more information?</h5>
+
+    <p>We will never sell or distribute your information. It is used exclusively for confirming shipping costs, and contact information. See our privacy policy for more information.</p><!-- TODO LINK!!!! -->
+    <label for="firstName">First Name:
+      <input type="text" name="firstName" ng-model="homeInfo.user.firstName" ng-trim="true">
+    </label><br />
+    <label for="lastName">Last Name:
+      <input type="text" name="lastName" ng-model="homeInfo.user.lastName" ng-trim="true">
+    </label><br />
+    <label for="streetAddress">Street Address:
+      <input type="text" name="streetAddress" ng-model="homeInfo.user.streetAddress" ng-trim="true">
+    </label><br />
+    <label for="city">City:
+      <input type="text" name="city" ng-model="homeInfo.user.city" ng-trim="true">
+    </label><br />
+
+    <label for="state">State:
+      <select name="state" ng-model="homeInfo.user.state" ng-options="state.name for state in stateAbbrs">
+      </select>
+    </label><br />
+
+    <label for="zip">Postal/Zip code:
+      <input type="text" name="zip" ng-model="homeInfo.user.zip" ng-trim="true">
+    </label><br />
+    <label for="phoneNumber">Phone Number:
+      <input type="text" name="phoneNumber" ng-model="homeInfo.user.phoneNumber" ng-trim="true">
+    </label><br />
+    <label for="email">Email address:
+      <input type="text" name="email" ng-model="homeInfo.user.email" ng-trim="true">
+    </label><br />
+  </form>
+</div>

@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('roofwrapApp.ProductsController', [])
-.controller('ProductsController', ['$scope', 'ScreenHelper', 'ProductFactory', function($scope, ScreenHelperFactory, ProductFactory) {
+.controller('ProductsController', ['$scope', 'ScreenHelper', 'FileFactory', function($scope, ScreenHelperFactory, FileFactory) {
   $scope.responsiveHelper = ScreenHelperFactory;
-  ProductFactory.getProducts().then( function (promise) {
+  FileFactory.getFile('products.json').then( function (promise) {
     $scope.products = promise.data;
   })
   .catch( function (promise, status) {

@@ -5,9 +5,10 @@ angular.module('roofwrapApp', [
   'ngSanitize',
   'roofwrapApp.BaseController',
   'roofwrapApp.ProductsController',
+  'roofwrapApp.CalculatorController',
   'roofwrapApp.ScreenHelper',
   'roofwrapApp.RoofwrapMenu',
-  'roofwrapApp.ProductFactory'
+  'roofwrapApp.FileFactory'
 ])
 .config(function ($routeProvider, $sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist(['self', 'http://roofwrap.com/dev/**']);
@@ -16,7 +17,6 @@ angular.module('roofwrapApp', [
   $routeProvider.when('/pricing',                          { templateUrl: 'templates/pricing.html', controller: 'BaseController'});
   $routeProvider.when('/overview',                         { templateUrl: 'templates/overview.html', controller: 'BaseController'});
   $routeProvider.when('/descriptions/:productName',        { templateUrl: function(urlattr){
-    console.log('Trying to get a template name on ' + urlattr.productName);
     return 'templates/descriptions/' + urlattr.productName + '.html';
   }, controller: 'ProductsController' });
   $routeProvider.when('/products',                         { templateUrl: 'templates/descriptions.html', controller: 'ProductsController' });
@@ -29,6 +29,7 @@ angular.module('roofwrapApp', [
   $routeProvider.when('/diagrams/construction',            { templateUrl: 'templates/construction.html', controller: 'BaseController' });
   $routeProvider.when('/installation',                     { templateUrl: 'templates/installation.html', controller: 'BaseController' });
   $routeProvider.when('/contact',                          { templateUrl: 'templates/contact.html', controller: 'BaseController' });
+  $routeProvider.when('/calculator',                       { templateUrl: 'templates/calculator.html', controller: 'CalculatorController'})
   $routeProvider.when('/404',                              { templateUrl: 'templates/404.html', controller: 'BaseController'});
   $routeProvider.otherwise({redirectTo: '/home'});
 });

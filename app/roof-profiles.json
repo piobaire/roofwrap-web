@@ -1,0 +1,39 @@
+{
+  "profiles" : [
+    {
+      "name" : "Flat, Standard",
+      "image" : "roof.flat.standard.gif",
+      "price" : 0
+    },
+    {
+      "name" : "Bi-Level",
+      "image" : "roof.bilevel.gif",
+      "price" : 65
+    },
+    {
+      "name" : "BiLevel, Double-Step",
+      "image" : "roof.bilevel.doublestep.gif",
+      "price" : 80
+    },
+    {
+      "name" : "Bilevel, Double-Step with Overhang",
+      "image" : "roof.bilevel.doublestep.overhang.gif",
+      "price" : 150
+    },
+    {
+      "name" : "Bilevel, Single-Step",
+      "image" : "roof.bilevel.singlestep.gif",
+      "price" : 45
+    },
+    {
+      "name" : "Trilevel, Flat",
+      "image" : "roof.trilevel.flat.gif",
+      "price" : 80
+    },
+    {
+      "name" : "Trilevel, Peaked",
+      "image" : "roof.trilevel.peaked.gif",
+      "price" : 65
+    }
+  ]
+}
