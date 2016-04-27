@@ -21,12 +21,16 @@
   </div>
 
   <div class="quote" layout="row" ng-if="!responsiveHelper.isSmall() && !responsiveHelper.isExtraSmall()">
-    <p flex="79">Buying a RoofWrap for my home was the best investment I've ever made.   It's AFFORDABLE, QUICK TO INSTALL, and will last for YEARS TO COME... </p>
-    <p flex="20">Scott, Renton, WA</p>
+    <p flex="79">"Buying a RoofWrap for my home was the best investment I've ever made. It's AFFORDABLE, QUICK TO INSTALL, and will last for YEARS TO COME..."</p>
+    <p flex="20">Scott<br /> Renton, WA</p>
   </div>
 
-  <p>We offer direct sourcing to commercial grade materials that have been previously limited to contractors through wholesale-only sources.  What’s more, you don’t have to buy contractor size package components.  RoofWrap’s custom kits provide you with just the amount you need for your job requirements.  Need just ten feet of an item?  You’ll be supplied just that, rather than the 100 foot factory roll.  Multiply the savings of each component and the savings are significant.</p>
-  <img src="" /> <!-- TODO add image -->
+  <h5 ng-if="responsiveHelper.isSmall() || responsiveHelper.isExtraSmall()">Adaptive &amp; Hardy</h5>
+
+  <div layout="row" class="top-box">
+    <p>We offer direct sourcing to commercial grade materials that have been previously limited to contractors through wholesale-only sources.  What’s more, you don’t have to buy contractor size package components.  RoofWrap’s custom kits provide you with just the amount you need for your job requirements.  Need just ten feet of an item?  You’ll be supplied just that, rather than the 100 foot factory roll.  Multiply the savings of each component and the savings are significant.</p>
+    <img src="img/epdm.roll.png" ng-if="!responsiveHelper.isSmall() && !responsiveHelper.isExtraSmall()"/>
+  </div>
 
   <h5>Time Tested Systems</h5>
   <hr />

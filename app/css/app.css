@@ -357,3 +357,22 @@ ol.decorated li {
 .calculator-block label, .calculator-block select {
   min-width: 25%;
 }
+
+.quote {
+  background: rgb(102, 204, 255);
+  margin: 0 -2em;
+  padding: 2em;
+  font-family: "Georgia", serif;
+}
+
+.quote p:nth-child(1) {
+  font-weight: bold;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

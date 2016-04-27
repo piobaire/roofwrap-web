@@ -30,6 +30,5 @@ angular.module('roofwrapApp', [
   $routeProvider.when('/installation',                     { templateUrl: 'templates/installation.html', controller: 'BaseController' });
   $routeProvider.when('/contact',                          { templateUrl: 'templates/contact.html', controller: 'BaseController' });
   $routeProvider.when('/calculator',                       { templateUrl: 'templates/calculator.html', controller: 'CalculatorController'})
-  $routeProvider.when('/404',                              { templateUrl: 'templates/404.html', controller: 'BaseController'});
-  $routeProvider.otherwise({redirectTo: '/home'});
+  $routeProvider.otherwise(                                { templateUrl: 'templates/404.html', controller: 'BaseController'});
 });
