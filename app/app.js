@@ -13,6 +13,7 @@ angular.module('roofwrapApp', [
 .config(function ($routeProvider, $sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist(['self', 'http://roofwrap.com/dev/**']);
 
+  $routeProvider.when('/',                                 { templateUrl: 'templates/home.html', controller: 'BaseController'});
   $routeProvider.when('/home',                             { templateUrl: 'templates/home.html', controller: 'BaseController'});
   $routeProvider.when('/pricing',                          { templateUrl: 'templates/pricing.html', controller: 'BaseController'});
   $routeProvider.when('/overview',                         { templateUrl: 'templates/overview.html', controller: 'BaseController'});
