@@ -1,5 +1,5 @@
 <div layout="row">
-  <div class="left-column" flex="33">
+  <div class="left-column" flex="33" ng-if="!responsiveHelper.isSmall() && !responsiveHelper.isExtraSmall()">
     <h2>Customers Love RoofWrap</h2>
     <hr />
     <p class="quote">I battled my  1972 single wide trailer roof for years using coatings.  A neighbor of mine bought a RoofWrap and recommended it.  It’s been 8 years and not a drop to be seen.  My two brothers and I put in on in less than a day.  Thanks RoofWrap!</p>
@@ -14,7 +14,7 @@
     <img src="" />
     <p>Various diagrams that help illustrate different aspects of installation.</p>
     <ul>
-      <li><a href="#">Hanging gutter detail</a></li>
+      <li><a href="#">Hanging gutter detail</a></li> <!-- TODO links all around -->
       <li><a href="#">Deck angle change attachment detail</a></li>
       <li><a href="#">Overlap detail</a></li>
       <li><a href="#">High wind hybrid attachment detail</a></li>

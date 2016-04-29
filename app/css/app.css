@@ -195,7 +195,7 @@ html, body {
 
 #menu {
   position: absolute;
-  width: 300px;
+  width: 175px;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -207,7 +207,7 @@ html, body {
 }
 
 #menu li {
-  padding: 10px 0;
+  padding: 6px 0;
   font-size: 22px;
 }
 
@@ -234,6 +234,21 @@ html, body {
   background-color: #003058;
   height: 100px;
   width: 100%;
+  color: white;
+  font-weight: bolder;
+}
+
+.copyright {
+  font-size: .7em;
+}
+
+#foot > .center {
+  margin: 0 auto;
+  display: table;
+}
+
+#foot .center p {
+  padding: 0;
 }
 
 .column {
@@ -360,9 +375,12 @@ ol.decorated li {
 
 .quote {
   background: rgb(102, 204, 255);
-  margin: 0 -2em;
   padding: 2em;
   font-family: "Georgia", serif;
+}
+
+.marginNeg2 {
+  margin: 0 -2em;
 }
 
 .quote p:nth-child(1) {

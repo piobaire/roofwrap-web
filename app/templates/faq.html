@@ -1,5 +1,5 @@
 <div layout="row">
-  <div class="left-column" flex="33">
+  <div class="left-column" flex="33" ng-if="!responsiveHelper.isSmall() && !responsiveHelper.isExtraSmall()">
     <h2>Customers Love RoofWrap</h2>
     <hr />
     <p class="quote">I battled my  1972 single wide trailer roof for years using coatings.  A neighbor of mine bought a RoofWrap and recommended it.  It’s been 8 years and not a drop to be seen.  My two brothers and I put in on in less than a day.  Thanks RoofWrap!</p>
@@ -11,7 +11,7 @@
   <div class="right-column" flex="66">
     <h3>FAQ</h3>
     <hr />
-    <img src="#" /> <!-- TODO - img -->
+    <img src="img/faq.jpg" />
     <p>On this page, you’ll find answers to most of our frequently asked questions.</p>
     <p>Please contact us if you have a question we don’t cover here.</p> <!-- TODO - link -->
 
