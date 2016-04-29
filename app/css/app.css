@@ -198,7 +198,7 @@ html, body {
   width: 175px;
   margin: -100px 0 0 -50px;
   padding: 50px;
-  padding-top: 125px;
+  padding-top: 100px;
   background: #6e6e6e;
   list-style-type: none;
   transform-origin: 0% 0%;
@@ -207,7 +207,7 @@ html, body {
 }
 
 #menu li {
-  padding: 6px 0;
+  padding: 6px 0 0 0;
   font-size: 22px;
 }
 

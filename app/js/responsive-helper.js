@@ -12,9 +12,6 @@ angular.module('roofwrapApp.ScreenHelper', [])
         isSmartDevice: function () {
           var ua = $window['navigator']['userAgent'] || $window['navigator']['vendor'] || $window['opera'];
           return (/iPhone|iPod|iPad|Silk|Android|BlackBerry|Opera Mini|IEMobile/).test(ua);
-        },
-        isMobile: function() {
-          return this.isSmartDevice() && this.isXs();
         }
       };
 
